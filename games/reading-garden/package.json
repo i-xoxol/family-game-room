@@ -1,0 +1,5 @@
+{
+  "name": "erics-reading-quest", "private": true, "version": "1.0.0", "type": "module",
+  "scripts": { "dev": "node scripts/dev-server.mjs", "check": "node --check public/app.js && node --check public/content.mjs && node --check public/audio.mjs && node --check public/art.mjs && node --check public/blend.mjs", "test": "node --test test/*.test.mjs", "audio:plan": "node scripts/audio-plan.mjs" },
+  "engines": { "node": ">=22.13" }
+}

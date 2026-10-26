@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2df">
+  <meta name="description" content="Little adventures, enormous gulps. A joyful, gentle donut-hole game for little explorers.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Snack Hole · Little adventures, big gulps</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<div id="app" class="home-mode">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Back to the games room"><span class="brand-donut" aria-hidden="true"></span><span>snack<span class="brand-hole">hole</span><small>LITTLE ADVENTURES, BIG GULPS</small></span></a>
+    <div class="top-actions">
+      <div class="star-bank" aria-label="Collected stars"><span aria-hidden="true">★</span><b id="bank-count">0</b></div>
+      <button class="round-btn album-btn" id="album-btn" type="button" aria-label="Open stickers and donut styles"><span aria-hidden="true">✿</span><span class="button-label">My treasures</span></button>
+      <button class="round-btn" id="sound-btn" type="button" aria-label="Turn sound off" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4zM15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg></button>
+      <button class="round-btn" id="pause-btn" type="button" aria-label="Pause game" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button>
+    </div>
+  </header>
+
+  <main id="arena" aria-label="Snack garden">
+    <canvas id="game" aria-label="Move the donut with a finger, mouse, or arrow keys to collect snacks.">Your browser needs Canvas to play Snack Hole.</canvas>
+    <div id="play-hud" hidden>
+      <div class="world-tag"><span id="world-symbol" aria-hidden="true">✿</span><span id="world-name">Picnic Park</span></div>
+      <div class="mission"><div class="mission-top"><span id="mission-label">Scoop 10 snacks</span><b><span id="collected">0</span><span class="muted"> / </span><span id="goal">10</span></b></div><div class="progress-track"><i id="progress-fill"></i><span class="track-star" style="left:30%">★</span><span class="track-star" style="left:65%">★</span><span class="track-star" style="left:99%">★</span></div></div>
+    </div>
+    <div id="cheer" class="cheer" aria-live="polite"></div>
+    <div id="home" class="home-panel">
+      <div class="home-copy">
+        <div class="eyebrow"><i></i> A HAPPY LITTLE ADVENTURE</div>
+        <h1>Tiny hole.<br><span>BIG appetite.</span></h1>
+        <p class="home-lede">Slide. Slurp. Surprise!</p>
+        <p class="home-instructions">Scoop up snacks, grow your donut,<br>and discover a pocketful of treasures.</p>
+        <button id="play-btn" class="primary jumbo" type="button"><span class="play-triangle" aria-hidden="true"></span>Let's play!</button>
+        <div class="home-note"><span aria-hidden="true">★ ★ ★</span> A little win in every adventure.</div>
+      </div>
+      <div class="hero-caption"><span class="hand-drawn-arrow" aria-hidden="true">↙</span><span>Your very hungry<br>new best friend.</span></div>
+      <div class="home-bottom"><span><b aria-hidden="true">☝</b> Just drag or tap</span><span><b aria-hidden="true">♡</b> No rush. All fun.</span><span><b aria-hidden="true">✦</b> Treasures to keep</span></div>
+    </div>
+    <div id="guide" class="guide" hidden><span class="guide-hand" aria-hidden="true">☝</span><span id="guide-text">Drag or tap to move</span></div>
+    <div id="power-banner" class="power-banner" hidden><span aria-hidden="true">✦</span> RAINBOW GULP! <span aria-hidden="true">✦</span></div>
+  </main>
+
+  <footer class="footer"><span id="footer-text">A small world full of delicious possibilities.</span><span class="footer-mark">MADE FOR PLAY <span aria-hidden="true">✳</span></span></footer>
+</div>
+
+<div id="pause-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pause-title" hidden>
+  <section class="dialog pause-dialog"><div class="dialog-icon" aria-hidden="true">☁</div><p class="eyebrow">TAKE YOUR TIME</p><h2 id="pause-title">A little breather?</h2><p>Your adventure will be right here.</p><button id="resume-btn" class="primary" type="button">Keep playing <span aria-hidden="true">▶</span></button><button id="go-home-btn" class="secondary" type="button">Back home</button></section>
+</div>
+
+<div id="reward-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="reward-title" hidden>
+  <section class="dialog reward-dialog"><div class="reward-stars" aria-label="Three stars earned"><span>★</span><span>★</span><span>★</span></div><p class="eyebrow" id="reward-eyebrow">ADVENTURE COMPLETE</p><h2 id="reward-title">That was a BIG gulp!</h2><div class="reward-sticker-wrap"><div id="reward-sticker" class="sticker-art" aria-hidden="true"></div><span class="new-badge" id="sticker-badge">NEW STICKER!</span></div><p id="reward-description">A happy little treasure for your collection.</p><div id="skin-unlock" class="skin-unlock" hidden><canvas id="unlock-canvas" width="104" height="82" aria-hidden="true"></canvas><div><small>NEW DONUT STYLE</small><b id="unlock-name">Berry Sprinkle</b></div></div><button id="next-btn" class="primary" type="button">Next adventure <span aria-hidden="true">→</span></button><div class="reward-links"><button id="reward-album-btn" class="text-btn" type="button">My treasures</button><button id="reward-home-btn" class="text-btn" type="button">Back home</button></div></section>
+</div>
+
+<div id="album-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="album-title" hidden>
+  <section class="dialog album-dialog"><button id="close-album-btn" class="round-btn close-btn" type="button" aria-label="Close treasures">×</button><p class="eyebrow">THE GOOD STUFF</p><h2 id="album-title">Your little treasures.</h2><p class="album-subtitle">Every adventure brings something to keep.</p><h3>Dress your donut</h3><div id="skin-grid" class="skin-grid"></div><h3>Your sticker garden <span id="sticker-count">0 / 5</span></h3><div id="sticker-grid" class="sticker-grid"></div><p class="save-note">Saved on this iPad or browser. Always free to play.</p></section>
+</div>
+
+<div id="startup-error" role="alert" hidden>Something needs a little refresh. Please reload the game.</div>
+<script src="logic.js?v=2"></script>
+<script src="art.js?v=2"></script>
+<script src="game.js?v=2"></script>
+</body>
+</html>

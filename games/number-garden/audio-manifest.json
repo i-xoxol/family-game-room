@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "model": "gpt-4o-mini-tts",
+  "voice": "marin",
+  "clips": [
+    {
+      "id": "welcome",
+      "text": "Hi Eric! I'm Pip. Let's grow a little math magic!",
+      "file": "audio/welcome.mp3"
+    },
+    {
+      "id": "prompt_count",
+      "text": "How many berries can you see? Touch each berry once to count it. Then tap its number.",
+      "file": "audio/prompt_count.mp3"
+    },
+    {
+      "id": "prompt_add",
+      "text": "Two little baskets! How many berries are there altogether? You can touch them to count.",
+      "file": "audio/prompt_add.mp3"
+    },
+    {
+      "id": "prompt_subtract",
+      "text": "Some carrots went to the picnic! Count the bright carrots that stayed. How many are left?",
+      "file": "audio/prompt_subtract.mp3"
+    },
+    {
+      "id": "prompt_compare_more",
+      "text": "Which basket has more berries? Tap the button under that basket. If they match, tap the same button.",
+      "file": "audio/prompt_compare_more.mp3"
+    },
+    {
+      "id": "prompt_compare_fewer",
+      "text": "Which basket has fewer berries? Tap the button under that basket. If they match, tap the same button.",
+      "file": "audio/prompt_compare_fewer.mp3"
+    },
+    {
+      "id": "prompt_pattern",
+      "text": "Ooh, a little pattern! Look at what repeats. Which picture comes next?",
+      "file": "audio/prompt_pattern.mp3"
+    },
+    {
+      "id": "help_count",
+      "text": "Let's count together! Touch each berry just once. The last number you say tells how many berries there are.",
+      "file": "audio/help_count.mp3"
+    },
+    {
+      "id": "help_build",
+      "text": "Put one berry in for each number you count. Stop at the number on your card. You can tap a berry to take it out.",
+      "file": "audio/help_build.mp3"
+    },
+    {
+      "id": "help_zero",
+      "text": "Zero means none. An empty basket has zero berries. Nothing needs to go in!",
+      "file": "audio/help_zero.mp3"
+    },
+    {
+      "id": "help_add",
+      "text": "Start with the first basket. Count those berries, then keep counting the berries in the next basket. That makes the total!",
+      "file": "audio/help_add.mp3"
+    },
+    {
+      "id": "help_subtract",
+      "text": "The faded carrots have gone to the picnic. Leave those alone. Count only the bright carrots that are still here.",
+      "file": "audio/help_subtract.mp3"
+    },
+    {
+      "id": "help_compare_more",
+      "text": "Try matching one berry from each basket. The basket with extra berries has more. If no berries are extra, they have the same number.",
+      "file": "audio/help_compare_more.mp3"
+    },
+    {
+      "id": "help_compare_fewer",
+      "text": "Try matching one berry from each basket. The basket that runs out first has fewer. If they both run out together, they have the same number.",
+      "file": "audio/help_compare_fewer.mp3"
+    },
+    {
+      "id": "help_pattern",
+      "text": "Say the pictures out loud. Listen for the little part that repeats. Then keep that part going!",
+      "file": "audio/help_pattern.mp3"
+    },
+    {
+      "id": "try_again",
+      "text": "No rush, little explorer. Let's look together. You can touch the pictures, or ask me for a hint!",
+      "file": "audio/try_again.mp3"
+    },
+    {
+      "id": "correct_one",
+      "text": "Lovely thinking! A little seed for your garden.",
+      "file": "audio/correct_one.mp3"
+    },
+    {
+      "id": "correct_two",
+      "text": "You found it! Your garden is growing, one discovery at a time.",
+      "file": "audio/correct_two.mp3"
+    },
+    {
+      "id": "correct_three",
+      "text": "You figured it out! Here comes a happy little garden seed.",
+      "file": "audio/correct_three.mp3"
+    },
+    {
+      "id": "correct_retry",
+      "text": "You kept trying, and you figured it out! That is how we learn. A seed for your garden!",
+      "file": "audio/correct_retry.mp3"
+    },
+    {
+      "id": "reward_new",
+      "text": "Five little seeds! Look what you grew! A flower for your garden, and a new friend to explore with.",
+      "file": "audio/reward_new.mp3"
+    },
+    {
+      "id": "reward_again",
+      "text": "Five more little discoveries! Your beautiful garden has another flower. Look how much it is growing!",
+      "file": "audio/reward_again.mp3"
+    },
+    {
+      "id": "playground",
+      "text": "Welcome to your number playground! Tap plus to add a berry. Tap minus to take one out. What can you discover?",
+      "file": "audio/playground.mp3"
+    },
+    {
+      "id": "discovery",
+      "text": "Here is your discovery!",
+      "file": "audio/discovery.mp3"
+    },
+    {
+      "id": "plus",
+      "text": "Plus.",
+      "file": "audio/plus.mp3"
+    },
+    {
+      "id": "minus",
+      "text": "Take away.",
+      "file": "audio/minus.mp3"
+    },
+    {
+      "id": "equals",
+      "text": "Equals.",
+      "file": "audio/equals.mp3"
+    },
+    {
+      "id": "token_leaf",
+      "text": "Leaf.",
+      "file": "audio/token_leaf.mp3"
+    },
+    {
+      "id": "token_flower",
+      "text": "Flower.",
+      "file": "audio/token_flower.mp3"
+    },
+    {
+      "id": "token_berry",
+      "text": "Berry.",
+      "file": "audio/token_berry.mp3"
+    },
+    {
+      "id": "token_star",
+      "text": "Star.",
+      "file": "audio/token_star.mp3"
+    },
+    {
+      "id": "prompt_shape_circle",
+      "text": "Can you find a circle? Tap your little shape friend.",
+      "file": "audio/prompt_shape_circle.mp3"
+    },
+    {
+      "id": "help_shape_circle",
+      "text": "A circle is round, like a little wheel. It has no corners.",
+      "file": "audio/help_shape_circle.mp3"
+    },
+    {
+      "id": "prompt_shape_triangle",
+      "text": "Can you find a triangle? Tap your little shape friend.",
+      "file": "audio/prompt_shape_triangle.mp3"
+    },
+    {
+      "id": "help_shape_triangle",
+      "text": "A triangle has three straight sides and three corners. Trace them with your finger. One, two, three!",
+      "file": "audio/help_shape_triangle.mp3"
+    },
+    {
+      "id": "prompt_shape_square",
+      "text": "Can you find a square? Tap your little shape friend.",
+      "file": "audio/prompt_shape_square.mp3"
+    },
+    {
+      "id": "help_shape_square",
+      "text": "A square has four equal sides. Look for a shape with four sides that are all the same length.",
+      "file": "audio/help_shape_square.mp3"
+    },
+    {
+      "id": "prompt_shape_rectangle",
+      "text": "Can you find a long rectangle? Tap your little shape friend.",
+      "file": "audio/prompt_shape_rectangle.mp3"
+    },
+    {
+      "id": "help_shape_rectangle",
+      "text": "Look for a long rectangle. It has four corners, with two longer sides and two shorter sides.",
+      "file": "audio/help_shape_rectangle.mp3"
+    },
+    {
+      "id": "prompt_shape_hexagon",
+      "text": "Can you find a hexagon? Tap your little shape friend.",
+      "file": "audio/prompt_shape_hexagon.mp3"
+    },
+    {
+      "id": "help_shape_hexagon",
+      "text": "A hexagon has six straight sides. Take your time and count all six sides.",
+      "file": "audio/help_shape_hexagon.mp3"
+    },
+    {
+      "id": "number_0",
+      "text": "0.",
+      "file": "audio/number_0.mp3"
+    },
+    {
+      "id": "prompt_build_0",
+      "text": "Can you make zero berries? An empty basket has zero. Tap All done when you are ready.",
+      "file": "audio/prompt_build_0.mp3"
+    },
+    {
+      "id": "number_1",
+      "text": "1.",
+      "file": "audio/number_1.mp3"
+    },
+    {
+      "id": "prompt_build_1",
+      "text": "Can you put 1 berry in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_1.mp3"
+    },
+    {
+      "id": "number_2",
+      "text": "2.",
+      "file": "audio/number_2.mp3"
+    },
+    {
+      "id": "prompt_build_2",
+      "text": "Can you put 2 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_2.mp3"
+    },
+    {
+      "id": "number_3",
+      "text": "3.",
+      "file": "audio/number_3.mp3"
+    },
+    {
+      "id": "prompt_build_3",
+      "text": "Can you put 3 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_3.mp3"
+    },
+    {
+      "id": "number_4",
+      "text": "4.",
+      "file": "audio/number_4.mp3"
+    },
+    {
+      "id": "prompt_build_4",
+      "text": "Can you put 4 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_4.mp3"
+    },
+    {
+      "id": "number_5",
+      "text": "5.",
+      "file": "audio/number_5.mp3"
+    },
+    {
+      "id": "prompt_build_5",
+      "text": "Can you put 5 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_5.mp3"
+    },
+    {
+      "id": "number_6",
+      "text": "6.",
+      "file": "audio/number_6.mp3"
+    },
+    {
+      "id": "prompt_build_6",
+      "text": "Can you put 6 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_6.mp3"
+    },
+    {
+      "id": "number_7",
+      "text": "7.",
+      "file": "audio/number_7.mp3"
+    },
+    {
+      "id": "prompt_build_7",
+      "text": "Can you put 7 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_7.mp3"
+    },
+    {
+      "id": "number_8",
+      "text": "8.",
+      "file": "audio/number_8.mp3"
+    },
+    {
+      "id": "prompt_build_8",
+      "text": "Can you put 8 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_8.mp3"
+    },
+    {
+      "id": "number_9",
+      "text": "9.",
+      "file": "audio/number_9.mp3"
+    },
+    {
+      "id": "prompt_build_9",
+      "text": "Can you put 9 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_9.mp3"
+    },
+    {
+      "id": "number_10",
+      "text": "10.",
+      "file": "audio/number_10.mp3"
+    },
+    {
+      "id": "prompt_build_10",
+      "text": "Can you put 10 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_10.mp3"
+    },
+    {
+      "id": "number_11",
+      "text": "11.",
+      "file": "audio/number_11.mp3"
+    },
+    {
+      "id": "prompt_build_11",
+      "text": "Can you put 11 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_11.mp3"
+    },
+    {
+      "id": "number_12",
+      "text": "12.",
+      "file": "audio/number_12.mp3"
+    },
+    {
+      "id": "prompt_build_12",
+      "text": "Can you put 12 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_12.mp3"
+    },
+    {
+      "id": "number_13",
+      "text": "13.",
+      "file": "audio/number_13.mp3"
+    },
+    {
+      "id": "prompt_build_13",
+      "text": "Can you put 13 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_13.mp3"
+    },
+    {
+      "id": "number_14",
+      "text": "14.",
+      "file": "audio/number_14.mp3"
+    },
+    {
+      "id": "prompt_build_14",
+      "text": "Can you put 14 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_14.mp3"
+    },
+    {
+      "id": "number_15",
+      "text": "15.",
+      "file": "audio/number_15.mp3"
+    },
+    {
+      "id": "prompt_build_15",
+      "text": "Can you put 15 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_15.mp3"
+    },
+    {
+      "id": "number_16",
+      "text": "16.",
+      "file": "audio/number_16.mp3"
+    },
+    {
+      "id": "prompt_build_16",
+      "text": "Can you put 16 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_16.mp3"
+    },
+    {
+      "id": "number_17",
+      "text": "17.",
+      "file": "audio/number_17.mp3"
+    },
+    {
+      "id": "prompt_build_17",
+      "text": "Can you put 17 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_17.mp3"
+    },
+    {
+      "id": "number_18",
+      "text": "18.",
+      "file": "audio/number_18.mp3"
+    },
+    {
+      "id": "prompt_build_18",
+      "text": "Can you put 18 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_18.mp3"
+    },
+    {
+      "id": "number_19",
+      "text": "19.",
+      "file": "audio/number_19.mp3"
+    },
+    {
+      "id": "prompt_build_19",
+      "text": "Can you put 19 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_19.mp3"
+    },
+    {
+      "id": "number_20",
+      "text": "20.",
+      "file": "audio/number_20.mp3"
+    },
+    {
+      "id": "prompt_build_20",
+      "text": "Can you put 20 berries in the basket? Tap the spaces to add berries. Then tap All done.",
+      "file": "audio/prompt_build_20.mp3"
+    }
+  ]
+}

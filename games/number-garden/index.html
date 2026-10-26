@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f3e5">
+  <meta name="description" content="Eric's Number Garden. Little math adventures, big discoveries. Count, build, compare, and grow with friendly garden pals.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Math Adventure · Eric's Number Garden</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<div id="art-defs" aria-hidden="true"></div>
+<div class="app" id="app">
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Back to the games room"><span id="brand-art" aria-hidden="true"></span><span>math adventure<small>ERIC'S NUMBER GARDEN</small></span></a>
+    <div class="top-actions"><button class="garden-pill" id="garden-btn" type="button"><span aria-hidden="true">✿</span><b id="bloom-count">0</b><span class="garden-label">My garden</span></button><button class="icon-btn" id="sound-btn" type="button" aria-label="Turn sounds off" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4zM15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg></button></div>
+  </header>
+
+  <main>
+    <section id="home" class="home-screen" aria-labelledby="home-title">
+      <div class="hero">
+        <div class="hero-copy"><p class="eyebrow"><span></span> HELLO, LITTLE NUMBER EXPLORER</p><h1 id="home-title">A little math.<br>A whole lot<br>of <em>magic.</em></h1><p class="hero-lede">Big discoveries start with little wonders.</p><p class="hero-description">Help your garden friends count, play,<br>and grow something wonderful.</p><button class="primary hero-play" id="start-btn" type="button"><span aria-hidden="true">▶</span><span id="start-label">Let's grow!</span></button><p class="resume-note" id="resume-note" hidden>Your little seeds are waiting. Pick up where you left off.</p><div class="hero-note"><span aria-hidden="true">✦</span> Five little challenges. One happy garden.</div></div>
+        <div class="hero-art" id="hero-art" aria-hidden="true"></div>
+        <div class="hero-caption"><span aria-hidden="true">↖</span><span>Meet Pip.<br>Your counting companion.</span></div>
+      </div>
+      <section class="adventures" aria-labelledby="adventures-title"><div class="section-heading"><div><p class="eyebrow">A LITTLE SOMETHING FOR EVERY CURIOUS MIND</p><h2 id="adventures-title">Pick a little adventure.</h2></div><button id="playground-btn" class="playground-link" type="button"><span aria-hidden="true">＋</span> Play with numbers <span aria-hidden="true">↗</span></button></div><div id="activity-grid" class="activity-grid"></div></section>
+      <div class="home-footer"><span>Take your time. Try things. Grow a little.</span><span>Pip's voice is AI-generated. <b aria-hidden="true">✳</b> MADE FOR ERIC</span></div>
+    </section>
+
+    <section id="lesson" class="lesson-screen" hidden aria-labelledby="question-title">
+      <div class="lesson-top"><button id="lesson-home-btn" class="back-btn" type="button"><span aria-hidden="true">←</span> Garden home</button><div class="seed-progress" aria-label="Seeds collected this adventure"><span>GROW YOUR GARDEN</span><div id="seed-dots"></div><small id="seed-count">0 / 5 seeds</small></div><div class="lesson-tag" id="lesson-tag">Counting Cove</div></div>
+      <div class="lesson-content"><aside class="buddy-column"><div class="buddy-art" id="buddy-art" aria-hidden="true"></div><div class="buddy-bubble" id="buddy-message">Let's discover together!</div><div class="buddy-name" id="buddy-name">PIP · YOUR GARDEN PAL</div></aside>
+        <section class="question-card"><div class="question-meta"><span id="skill-label">COUNT & DISCOVER</span><button id="hear-btn" class="hear-btn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4zM15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/></svg> Hear it</button></div><h2 id="question-title">How many berries?</h2><p id="question-detail" class="question-detail">Touch each one to count.</p><div id="question-stage" class="question-stage"></div><div id="answer-area" class="answer-area"></div><div id="feedback" class="feedback" aria-live="polite"></div><div class="question-bottom"><button id="hint-btn" class="hint-btn" type="button"><span aria-hidden="true">☀</span> Help me, Pip</button><button id="next-btn" class="primary next-btn" type="button" hidden>Next little challenge <span aria-hidden="true">→</span></button></div></section>
+      </div>
+      <div class="lesson-footer"><span>Curiosity counts. Mistakes help us learn.</span><span id="challenge-number">A LITTLE ADVENTURE FOR ERIC</span></div>
+    </section>
+
+    <section id="playground" class="playground-screen" hidden aria-labelledby="playground-title"><div class="playground-heading"><button id="playground-home-btn" class="back-btn" type="button"><span aria-hidden="true">←</span> Garden home</button><p class="eyebrow">WONDER. TRY. DISCOVER.</p><h1 id="playground-title">What can your numbers do?</h1><p>Add a berry. Take one away. See what changes.</p></div><div class="number-lab"><div class="lab-group"><h2>First basket</h2><div class="lab-frame" id="lab-left"></div><div class="lab-controls"><button id="left-minus" type="button" aria-label="Take one berry from the first basket">−</button><b id="lab-a">2</b><button id="left-plus" type="button" aria-label="Add one berry to the first basket">＋</button></div></div><button id="lab-operation" class="lab-operation" type="button" aria-label="Change from adding to taking away">＋</button><div class="lab-group"><h2>Second basket</h2><div class="lab-frame" id="lab-right"></div><div class="lab-controls"><button id="right-minus" type="button" aria-label="Take one berry from the second basket">−</button><b id="lab-b">1</b><button id="right-plus" type="button" aria-label="Add one berry to the second basket">＋</button></div></div><span class="lab-equals" aria-hidden="true">＝</span><div class="lab-result"><small>YOU DISCOVERED</small><b id="lab-result">3</b><div id="lab-result-art"></div></div></div><div class="lab-note" id="lab-note">2 and 1 make 3. Look at them all together!</div><button id="lab-hear" class="hear-btn lab-hear" type="button">♫ Hear my discovery</button></section>
+  </main>
+</div>
+
+<div class="modal" id="reward-modal" role="dialog" aria-modal="true" aria-labelledby="reward-title" hidden><section class="dialog reward-dialog"><div class="reward-flower" aria-hidden="true">✿</div><p class="eyebrow">FIVE SEEDS. A WHOLE LOT OF GROWING.</p><h2 id="reward-title">Look what you grew!</h2><div id="reward-art" class="reward-art" aria-hidden="true"></div><div class="new-friend-tag" id="new-friend-tag">A NEW GARDEN FRIEND!</div><h3 id="reward-friend">Momo the bunny</h3><p id="reward-text">Your thinking helped the garden grow.</p><button id="another-btn" class="primary" type="button">Another little adventure <span aria-hidden="true">→</span></button><div class="reward-actions"><button id="reward-garden-btn" class="text-btn" type="button">Visit my garden</button><button id="reward-home-btn" class="text-btn" type="button">Rest for now</button></div></section></div>
+
+<div class="modal" id="garden-modal" role="dialog" aria-modal="true" aria-labelledby="garden-title" hidden><section class="dialog garden-dialog"><button id="close-garden-btn" class="icon-btn close-btn" type="button" aria-label="Close my garden">×</button><p class="eyebrow">A PLACE TO WATCH YOUR WONDERS GROW</p><h2 id="garden-title">Eric's little garden.</h2><p id="garden-description">Every adventure grows a flower and brings a friend closer.</p><div id="garden-scene" class="garden-scene" aria-label="Your growing flower garden"></div><h3>Choose your garden pal <span id="friend-count">1 / 6</span></h3><div id="friend-grid" class="friend-grid"></div><p class="garden-save-note">Your garden and learning progress stay on this iPad or browser.</p></section></div>
+
+<canvas id="celebration" aria-hidden="true"></canvas>
+<div id="startup-error" role="alert" hidden>Our little garden needs a refresh. Please reload the page.</div>
+<script src="art.js?v=3"></script>
+<script src="logic.js?v=3"></script>
+<script src="audio-map.js?v=3"></script>
+<script src="voice.js?v=3"></script>
+<script src="app.js?v=3"></script>
+</body>
+</html>

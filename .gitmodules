@@ -1,0 +1,3 @@
+[submodule "games/robi"]
+	path = games/robi
+	url = https://github.com/i-xoxol/robi-playroom.git

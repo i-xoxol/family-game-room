@@ -1,0 +1,40 @@
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  collection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+        working-directory: games/number-garden
+      - run: npm ci --ignore-scripts
+        working-directory: games/snack-hole
+      - run: npm ci --ignore-scripts
+        working-directory: games/robi
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:public
+  super-eric:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: games/super-eric
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm audit --omit=dev --audit-level=high
